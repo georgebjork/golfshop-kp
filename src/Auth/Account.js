@@ -97,19 +97,19 @@ const Account = ({ session }) => {
           <Form.Group className="mb-3">
             <Form.Label htmlFor="username">Username</Form.Label>
             <Form.Control type='text' value={username || ''}  onChange={(e) => setUsername(e.target.value)} placeholder='Username' disabled={loading} />
-            <Form.Text className="text-muted"> This will be your username </Form.Text>
+            <Form.Text className="text-muted"> Username </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3">
             <Form.Label> First Name </Form.Label>
             <Form.Control type='text' value={first_name || ''} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name' disabled={loading} />
-            <Form.Text className="text-muted"> Your First Name </Form.Text>
+            <Form.Text className="text-muted"> First Name </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3">
             <Form.Label> Last Name </Form.Label>
             <Form.Control type='text' value={last_name || ''} onChange={(e) => setLastName(e.target.value)} placeholder='Last Name' disabled={loading} />
-            <Form.Text className="text-muted"> Your Last Name </Form.Text>
+            <Form.Text className="text-muted"> Last Name </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3">

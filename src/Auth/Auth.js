@@ -38,7 +38,7 @@ export default function Auth() {
 
               <Button variant='success' aria-live="polite" onClick={handleLogin} className="mt-3">
                 {loading 
-                  ? <Spinner as="span" animation="border" size="sm" role="status" /> 
+                  ? (<Spinner as="span" animation="border" size="sm" role="status" />) 
                   : 'Send magic link ' }
               </Button>
             </Form.Group>
