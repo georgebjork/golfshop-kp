@@ -12,14 +12,13 @@ function Players() {
 
     const getPlayers = async () => {
         const {data, error } = await supabase
-            .from('users_table')
+            .from('profiles')
             .select()
-            .order('id', { ascending: true });
         if(data){
             console.log(data);
             setCurrentPlayers(data)
         } if(error){
-            console.log(data);
+            console.log(error);
         }
 
     }
@@ -29,7 +28,6 @@ function Players() {
             <Table striped bordered hover>
                 <thead class='thead-dark'>
                     <tr>
-                        <th scope='col'>Id</th>
                         <th scope='col'>Name</th>
                         <th scope='col'>KP's Won</th>
                     </tr>
@@ -39,7 +37,6 @@ function Players() {
                     currentPlayers.map(item => {
                         return (
                             <tr>
-                                <td>{item['id']}</td>
                                 <td>{item['first_name']}</td>
                                 <td>{item['kp_won']}</td>
                             </tr>

@@ -23,7 +23,7 @@ export default function App() {
   return (
     <>
       {!session ? (
-        <Auth />
+        <Auth session={session} />
       ) : (
       <>
         <Header />
@@ -33,12 +33,5 @@ export default function App() {
         </Routes>
       </>)}
     </>
-    // <div className="container" style={{ padding: '50px 0 100px 0' }}>
-    //   {!session ? (
-    //     <Auth />
-    //   ) : ( 
-    //     <Account key={session.user.id} session={session} />
-    //   )}
-    // </div>
   )
 }

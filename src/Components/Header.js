@@ -2,10 +2,46 @@ import React from 'react';
 
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import {LinkContainer} from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
+import { supabase } from '../Auth/supabaseClient';
+import { useState, useEffect } from 'react'
 
 
-function Header() {
+const Header = ({ session }) => {
+
+    // const [loading, setLoading] = useState(true)
+    // const [first_name, setFirstName] = useState(null);
+    // const [last_name, setLastName] = useState(null);
+
+    // useEffect(() => {
+    //     getProfile()
+    // }, [session])
+
+    // const getProfile = async () => {
+    //     try {
+    //         setLoading(true)
+    //         const { user } = session
+
+    //         let { data, error, status } = await supabase
+    //             .from('profiles')
+    //             .select(`username, website, avatar_url, first_name, last_name`)
+    //             .eq('id', user.id)
+    //             .single()
+
+    //         if (error && status !== 406) {
+    //             throw error
+    //         }
+
+    //         if (data) {
+    //             setFirstName(data.first_name)
+    //             setLastName(data.last_name)
+    //         }
+    //     } catch (error) {
+    //         alert(error.message)
+    //     } finally {
+    //         setLoading(false)
+    //     }
+    // }
 
     return (
         <>
